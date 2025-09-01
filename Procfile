@@ -1,0 +1,1 @@
+web: fastmcp run weather.py --transport streamable-http --port $PORT
