@@ -91,7 +91,6 @@ Forecast: {period['detailedForecast']}
 
 if __name__ == "__main__":
     import os
-    port = int(os.environ.get("PORT", 10000))  # Render provides PORT
-    os.environ["PORT"] = str(port)             # required by FastMCP
-    mcp.run(transport="sse")                  # no host/port arguments needed
+    port = int(os.environ.get("PORT", 8000))  # Railway provides PORT env
+    mcp.run(transport="streamable-http", host="0.0.0.0", port=port)
 
