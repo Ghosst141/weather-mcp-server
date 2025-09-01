@@ -93,5 +93,5 @@ if __name__ == "__main__":
     import os
     port = int(os.environ.get("PORT", 10000))  # Render provides PORT
     os.environ["PORT"] = str(port)             # required by FastMCP
-    mcp.run(transport="http")                  # no host/port arguments needed
+    mcp.run(transport="sse")                  # no host/port arguments needed
 
